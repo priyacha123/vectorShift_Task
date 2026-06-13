@@ -1,9 +1,6 @@
 # VectorShift Frontend Assessment
 
 ### Task-1 Reusable Node Abstraction
-
-Completed:
-
 - Created `frontend/src/nodes/baseNode.js`
 - Moved shared node layout into `BaseNode`
 - Standardized:
@@ -19,10 +16,7 @@ Completed:
 
 ---
 
-### Task-1.1 New Custom Nodes Added
-
-Completed:
-
+#### Task-1.1 New Custom Nodes Added
 - Email node
 - Feedback node
 - Image node
@@ -31,15 +25,11 @@ Completed:
 
 Each node was added to the React Flow node registry and sidebar library.
 
-Screenshot:
-
 ![Task-1](/frontend/public/task1.png)
+
 ---
 
 ### Task-2 UI Styling Improvements
-
-Completed:
-
 - Added top navigation bar
 - Added left sidebar node library
 - Expanded canvas into a full workspace layout
@@ -50,16 +40,11 @@ Completed:
 - Styled submit button and moved it into the sidebar
 - Improved React Flow background, controls, and minimap presentation
 
-Screenshot:
-
 ![Task-2](/frontend/public/task2.png)
 
 ---
 
 ### Task-3 Text Node Logic
-
-Completed:
-
 - Added dynamic text area sizing
 - Added variable detection using `{{variable}}` syntax
 - Auto-generated input handles from detected variables
@@ -71,19 +56,13 @@ Example supported variables:
 {{input}}
 {{name}}
 {{topic}}
-{{customer_email}}
 ```
-
-Screenshot:
 
 ![Task-3](/frontend/public/task3.png)
 
 ---
 
 ### Task-4 Backend Integration
-
-Completed:
-
 - Connected submit flow to `POST /pipelines/parse`
 - Sent current `nodes` and `edges` from the frontend
 - Displayed backend response in the frontend alert
@@ -92,9 +71,7 @@ Completed:
   - number of edges
   - DAG validation result
 
-Screenshot:
-
-![alt text](/frontend/public/task4.png)
+![Task-4](/frontend/public/task4.png)
 
 ---
 
