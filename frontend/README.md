@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# VectorShift Frontend Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Task-1. Reusable Node Abstraction
 
-## Available Scripts
+Completed:
 
-In the project directory, you can run:
+- Created `frontend/src/nodes/baseNode.js`
+- Moved shared node layout into `BaseNode`
+- Standardized:
+  - node container
+  - header
+  - body
+  - handle rendering
+- Existing nodes using the shared base:
+  - Input
+  - Output
+  - LLM
+  - Text
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Task-2. New Custom Nodes Added
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Completed:
 
-### `npm test`
+- Email node
+- Feedback node
+- Image node
+- Phone node
+- Reviews node
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each node was added to the React Flow node registry and sidebar library.
 
-### `npm run build`
+Screenshot:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Task-1](task1.png)
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Task-3. UI Styling Improvements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Completed:
 
-### `npm run eject`
+- Added top navigation bar
+- Added left sidebar node library
+- Expanded canvas into a full workspace layout
+- Restyled draggable node cards
+- Added icons for node palette items
+- Improved node card appearance
+- Improved headers, inputs, dropdowns, spacing, and shadows
+- Styled submit button and moved it into the sidebar
+- Improved React Flow background, controls, and minimap presentation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Screenshot:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Task-2](task2.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Task-4. Text Node Logic
 
-## Learn More
+Completed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Added dynamic text area sizing
+- Added variable detection using `{{variable}}` syntax
+- Auto-generated input handles from detected variables
+- Prevented duplicate variable handles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example supported variables:
 
-### Code Splitting
+```text
+{{input}}
+{{name}}
+{{topic}}
+{{customer_email}}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Screenshot:
 
-### Analyzing the Bundle Size
+![Task-3](task3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### 5. Backend Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Completed:
 
-### Advanced Configuration
+- Connected submit flow to `POST /pipelines/parse`
+- Sent current `nodes` and `edges` from the frontend
+- Displayed backend response in the frontend alert
+- Verified output includes:
+  - number of nodes
+  - number of edges
+  - DAG validation result
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Screenshot:
 
-### Deployment
+![alt text](task4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
