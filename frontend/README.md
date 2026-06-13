@@ -33,7 +33,7 @@ Each node was added to the React Flow node registry and sidebar library.
 
 Screenshot:
 
-![Task-1](task1.png)
+![Task-1](/frontend/public/task1.png)
 ---
 
 ### Task-3. UI Styling Improvements
@@ -52,7 +52,7 @@ Completed:
 
 Screenshot:
 
-![Task-2](task2.png)
+![Task-2](/frontend/public/task2.png)
 
 ---
 
@@ -76,7 +76,7 @@ Example supported variables:
 
 Screenshot:
 
-![Task-3](task3.png)
+![Task-3](/frontend/public/task3.png)
 
 ---
 
@@ -94,7 +94,7 @@ Completed:
 
 Screenshot:
 
-![alt text](task4.png)
+![alt text](/frontend/public/task4.png)
 
 ---
 
