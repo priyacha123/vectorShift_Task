@@ -1,6 +1,6 @@
 # VectorShift Frontend Assessment
 
-### Task-1. Reusable Node Abstraction
+### Task-1 Reusable Node Abstraction
 
 Completed:
 
@@ -19,7 +19,7 @@ Completed:
 
 ---
 
-### Task-2. New Custom Nodes Added
+### Task-1.1 New Custom Nodes Added
 
 Completed:
 
@@ -36,7 +36,7 @@ Screenshot:
 ![Task-1](/frontend/public/task1.png)
 ---
 
-### Task-3. UI Styling Improvements
+### Task-2 UI Styling Improvements
 
 Completed:
 
@@ -56,7 +56,7 @@ Screenshot:
 
 ---
 
-### Task-4. Text Node Logic
+### Task-3 Text Node Logic
 
 Completed:
 
@@ -80,7 +80,7 @@ Screenshot:
 
 ---
 
-### 5. Backend Integration
+### Task-4 Backend Integration
 
 Completed:
 
