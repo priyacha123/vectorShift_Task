@@ -27,7 +27,11 @@ export const LLMNode = ({ id }) => {
         },
       ]}
     >
-      <span>This is a LLM.</span>
+      <div className="node-prompt-box">
+        <p className="node-prompt-text">
+          "This is LLM Node"
+        </p>
+      </div>
     </BaseNode>
   );
 };

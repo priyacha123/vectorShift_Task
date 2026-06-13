@@ -3,17 +3,10 @@
 import { Handle } from 'reactflow';
 
 export const BaseNode = ({ title, children, handles = [], style = {} }) => {
+  const nodeClass = `base-node node-${title.toLowerCase().replace(/\s+/g, '-')}`;
+
   return (
-    <div
-      style={{
-        width: 200,
-        minHeight: 100,
-        border: '1px solid black',
-        padding: 15,
-        borderRadius: 10,
-        ...style,
-      }}
-    >
+    <div className={nodeClass} style={style}>
       {handles.map((handle) => (
         <Handle
           key={handle.id}
@@ -24,13 +17,11 @@ export const BaseNode = ({ title, children, handles = [], style = {} }) => {
         />
       ))}
 
-      <div style={{ padding: 5 }}>
-        <span>{title}</span>
+      <div className="node-header">
+        <span className="node-title">{title}</span>
       </div>
 
-      <div style={{ padding: 5 }}>
-        {children}
-      </div>
+      <div className="node-body">{children}</div>
     </div>
   );
 };

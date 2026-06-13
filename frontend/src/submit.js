@@ -31,8 +31,10 @@ export const SubmitButton = () => {
   };
 
   return (
-    <button onClick={handleSubmit}>
-      Submit
-    </button>
+    <div className="submit-wrapper">
+      <button className="submit-btn" onClick={handleSubmit}>
+        <span>Submit Pipeline</span>
+      </button>
+    </div>
   );
 };
