@@ -6,6 +6,7 @@ import { BaseNode } from "./baseNode";
 
 export const TextNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "{{input}}");
+  const lineCount = currText.split("\n").length;
 
   const variables = useMemo(() => {
     const regex = /{{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*}}/g;
@@ -14,7 +15,7 @@ export const TextNode = ({ id, data }) => {
   }, [currText]);
 
   const width = Math.min(Math.max(220, currText.length * 8), 420);
-  const height = Math.min(Math.max(100, currText.split("\n").length * 28 + 80), 260);
+  const height = Math.min(Math.max(150, lineCount * 28 + 78), 260);
 
   const variableHandles = variables.map((variable, index) => ({
     type: "target",
@@ -30,7 +31,7 @@ export const TextNode = ({ id, data }) => {
       title="Text"
       style={{
         width,
-        minHeight: height,
+        height,
       }}
       handles={[
         ...variableHandles,
@@ -41,16 +42,12 @@ export const TextNode = ({ id, data }) => {
         },
       ]}
     >
-      <label>
+      <label className="text-node-field">
         <textarea
           value={currText}
           onChange={(e) => setCurrText(e.target.value)}
-          rows={4}
-          style={{
-            width: "100%",
-            minHeight: 70,
-            resize: "none",
-          }}
+          rows={Math.max(4, Math.min(lineCount + 1, 8))}
+          className="text-node-textarea"
           placeholder="Type text with variables like {{input}}"
         />
       </label>

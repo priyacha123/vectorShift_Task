@@ -180,6 +180,7 @@ body,
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
 }
 
 .node-body label {
@@ -191,6 +192,21 @@ body,
   text-transform: uppercase;
   color: var(--gray-label);
   letter-spacing: 0.5px;
+}
+
+.node-text .node-body {
+  justify-content: center;
+}
+
+.node-text .text-node-field {
+  flex: 1;
+  min-height: 0;
+}
+
+.node-text .text-node-textarea {
+  height: 90%;
+  min-height: 90%;
+  resize: none;
 }
 
 .node-body input,
